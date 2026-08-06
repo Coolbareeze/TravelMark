@@ -48,7 +48,31 @@ You have two options before launch:
 
 If you deploy to a traditional VPS or container host (not serverless) instead of Vercel, the filesystem-backed admin panel works as-is with no changes.
 
-## 6. Pre-Launch Checklist
+## Alternative: Hostinger (Shared/Business hosting with Node.js)
+
+Hostinger's Node.js hPanel feature runs your app under Phusion Passenger, which expects a single JS entry file rather than the `next start` CLI. This repo includes `server.js` for exactly that — it wraps Next.js's programmatic server API so pages, API routes, middleware and image optimisation all work identically to `next start`.
+
+**One real advantage over Vercel here:** shared/VPS hosting has a normal persistent filesystem, so the admin dashboard's JSON writes (`/data/*.json`) work correctly with no changes — the Vercel caveat in §5 above does not apply on Hostinger.
+
+1. **Build locally first** (Hostinger shared plans don't have the CPU headroom for a production build):
+   ```bash
+   npm install
+   npm run build
+   ```
+2. **Upload the project** to your Hostinger account — either via hPanel's Git integration (point it at `https://github.com/Coolbareeze/TravelMark`) or by zipping the folder (excluding `node_modules` and `.next/cache`) and uploading through File Manager, then extracting.
+3. In **hPanel → Advanced → Node.js**, create a new application:
+   - **Application root:** the folder you uploaded to (e.g. `travelmark`)
+   - **Application startup file:** `server.js`
+   - **Node.js version:** 18.x or newer
+4. Click **Run NPM Install** in the same screen (installs dependencies on the server) — or upload `node_modules` yourself if the install times out on shared plans.
+5. Add environment variables in the **Environment Variables** section of the same Node.js app screen — same table as §3 above (`NEXT_PUBLIC_SITE_URL`, `ADMIN_USERNAME`, `ADMIN_PASSWORD`, `ADMIN_SESSION_SECRET`, `RESEND_API_KEY`, `CONTACT_TO_EMAIL`, etc.).
+6. Set `PORT` to whatever Hostinger's Node.js manager assigns (it's usually pre-filled) — `server.js` reads this automatically.
+7. Start/restart the application from hPanel. Hostinger's Node.js manager keeps it running (auto-restarts on crash/reboot) — no PM2 needed.
+8. Point your domain to the Node.js app: **hPanel → Domains** → set `travelmark.co.uk` to route through the Node.js application (Hostinger does this automatically when the app is created against that domain, or via a reverse-proxy `.htaccess` rule if using a subfolder).
+
+If your Hostinger plan turns out **not** to include Node.js hosting (pure shared/PHP hosting), this app cannot run there as-is — a static export would strip out the admin panel, forms and API routes, which are core to the build. In that case, either upgrade to a Node.js-enabled plan/VPS, or use Vercel per §1–4 above and point your Hostinger-registered domain's DNS at Vercel instead.
+
+## Pre-Launch Checklist
 
 - [ ] Replace placeholder logo files with final artwork (`public/images/logo*.svg`, `favicon.svg`)
 - [ ] Replace `data/*.json` placeholder imagery with licensed photography

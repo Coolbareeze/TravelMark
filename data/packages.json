@@ -1,0 +1,146 @@
+[
+  {
+    "id": "p1", "slug": "dubai-luxury-escape", "title": "Dubai Luxury Escape", "destination": "Dubai, UAE",
+    "category": "luxury-holidays", "image": "https://picsum.photos/seed/pkg-dubai-lux/1200/900",
+    "price": 1249, "originalPrice": 1499, "duration": "7 nights", "airline": "Emirates",
+    "hotelRating": 5, "hotelName": "Burj Al Arab Jumeirah", "transfersIncluded": true, "boardBasis": "Bed & Breakfast",
+    "highlights": ["Private airport transfers", "Desert safari with dinner", "Burj Khalifa VIP access"],
+    "description": "Seven nights of five-star indulgence in Dubai, from private transfers to the world's most iconic address.",
+    "featured": true, "offerEndsAt": "2026-09-30"
+  },
+  {
+    "id": "p2", "slug": "maldives-overwater-villa", "title": "Maldives Overwater Villa Retreat", "destination": "Maldives",
+    "category": "luxury-holidays", "image": "https://picsum.photos/seed/pkg-maldives/1200/900",
+    "price": 2199, "duration": "7 nights", "airline": "Qatar Airways",
+    "hotelRating": 5, "hotelName": "Soneva Fushi", "transfersIncluded": true, "boardBasis": "All Inclusive",
+    "highlights": ["Private overwater villa", "Seaplane transfers", "Sunset dolphin cruise"],
+    "description": "Barefoot luxury over crystal lagoons — the ultimate honeymoon or milestone escape.",
+    "featured": true
+  },
+  {
+    "id": "p3", "slug": "istanbul-city-break", "title": "Istanbul City Break", "destination": "Istanbul, Turkey",
+    "category": "city-breaks", "image": "https://picsum.photos/seed/pkg-istanbul/1200/900",
+    "price": 349, "duration": "4 nights", "airline": "Turkish Airlines",
+    "hotelRating": 4, "hotelName": "CVK Park Bosphorus", "transfersIncluded": true, "boardBasis": "Bed & Breakfast",
+    "highlights": ["Guided Old City tour", "Bosphorus dinner cruise", "Grand Bazaar walking tour"],
+    "description": "A cultured city break where continents, cuisines and centuries collide.",
+    "featured": true
+  },
+  {
+    "id": "p4", "slug": "paris-romantic-getaway", "title": "Paris Romantic Getaway", "destination": "Paris, France",
+    "category": "city-breaks", "image": "https://picsum.photos/seed/pkg-paris/1200/900",
+    "price": 279, "duration": "3 nights", "airline": "British Airways",
+    "hotelRating": 4, "hotelName": "Hôtel Le Six", "transfersIncluded": false, "boardBasis": "Room Only",
+    "highlights": ["Eiffel Tower summit access", "Seine river cruise", "Louvre skip-the-line"],
+    "description": "Effortless elegance in three nights — the essential Paris weekend.",
+    "featured": true
+  },
+  {
+    "id": "p5", "slug": "bali-beach-bliss", "title": "Bali Beach Bliss", "destination": "Bali, Indonesia",
+    "category": "beach-holidays", "image": "https://picsum.photos/seed/pkg-bali/1200/900",
+    "price": 899, "originalPrice": 1099, "duration": "10 nights", "airline": "Singapore Airlines",
+    "hotelRating": 5, "hotelName": "Four Seasons Sayan", "transfersIncluded": true, "boardBasis": "Half Board",
+    "highlights": ["Private pool villa", "Rice terrace excursion", "Traditional Balinese spa day"],
+    "description": "Ten nights of jungle villas, temple visits and tranquil beach afternoons.",
+    "featured": true, "offerEndsAt": "2026-10-15"
+  },
+  {
+    "id": "p6", "slug": "phuket-family-sunshine", "title": "Phuket Family Sunshine", "destination": "Phuket, Thailand",
+    "category": "family-holidays", "image": "https://picsum.photos/seed/pkg-phuket/1200/900",
+    "price": 749, "duration": "7 nights", "airline": "Qatar Airways",
+    "hotelRating": 4, "hotelName": "Angsana Laguna", "transfersIncluded": true, "boardBasis": "All Inclusive",
+    "highlights": ["Kids' club included", "Waterpark day pass", "Family snorkelling trip"],
+    "description": "All-inclusive family fun with a kids' club, waterparks and calm, shallow beaches.",
+    "featured": true
+  },
+  {
+    "id": "p7", "slug": "orlando-family-adventure", "title": "Orlando Family Adventure", "destination": "Orlando, USA",
+    "category": "family-holidays", "image": "https://picsum.photos/seed/pkg-orlando/1200/900",
+    "price": 1099, "duration": "10 nights", "airline": "Virgin Atlantic",
+    "hotelRating": 4, "hotelName": "Universal's Cabana Bay", "transfersIncluded": true, "boardBasis": "Room Only",
+    "highlights": ["3-park theme park tickets", "Early park admission", "Free shuttle transfers"],
+    "description": "Ten nights of theme park magic for the whole family, tickets and transfers included.",
+    "featured": false
+  },
+  {
+    "id": "p8", "slug": "makkah-madinah-umrah-premium", "title": "Premium Umrah Package", "destination": "Makkah & Madinah, Saudi Arabia",
+    "category": "umrah-hajj", "image": "https://picsum.photos/seed/pkg-umrah-premium/1200/900",
+    "price": 1399, "duration": "10 nights", "airline": "Saudia",
+    "hotelRating": 5, "hotelName": "Swissôtel Al Maqam Makkah", "transfersIncluded": true, "boardBasis": "Half Board",
+    "highlights": ["Haram-facing rooms", "Ziyarat tours in both cities", "Experienced group leader"],
+    "description": "A comfortable, guided Umrah with five-star Haram-view accommodation in both holy cities.",
+    "featured": true
+  },
+  {
+    "id": "p9", "slug": "makkah-madinah-umrah-economy", "title": "Economy Umrah Package", "destination": "Makkah & Madinah, Saudi Arabia",
+    "category": "umrah-hajj", "image": "https://picsum.photos/seed/pkg-umrah-economy/1200/900",
+    "price": 699, "duration": "7 nights", "airline": "Ethiopian Airlines",
+    "hotelRating": 3, "hotelName": "Al Massa Hotel", "transfersIncluded": true, "boardBasis": "Room Only",
+    "highlights": ["Walking distance to Haram", "Airport meet & greet", "Ziyarat tour included"],
+    "description": "Affordable and dignified Umrah travel without compromising on essentials.",
+    "featured": false
+  },
+  {
+    "id": "p10", "slug": "hajj-guided-group", "title": "Guided Hajj Group Package", "destination": "Makkah & Madinah, Saudi Arabia",
+    "category": "umrah-hajj", "image": "https://picsum.photos/seed/pkg-hajj/1200/900",
+    "price": 5499, "duration": "14 nights", "airline": "Saudia",
+    "hotelRating": 4, "hotelName": "Makkah Towers", "transfersIncluded": true, "boardBasis": "Full Board",
+    "highlights": ["Full Hajj rites guidance", "Mina & Arafat tented camps", "Dedicated scholar-led group"],
+    "description": "A fully guided Hajj journey with experienced scholars and complete logistics handled.",
+    "featured": true
+  },
+  {
+    "id": "p11", "slug": "rome-classic-city-break", "title": "Rome Classic City Break", "destination": "Rome, Italy",
+    "category": "city-breaks", "image": "https://picsum.photos/seed/pkg-rome/1200/900",
+    "price": 299, "duration": "4 nights", "airline": "British Airways",
+    "hotelRating": 4, "hotelName": "Hotel Artemide", "transfersIncluded": false, "boardBasis": "Bed & Breakfast",
+    "highlights": ["Colosseum skip-the-line", "Vatican Museums tour", "Trastevere food walk"],
+    "description": "Four days through the Eternal City's ruins, art and unbeatable cuisine.",
+    "featured": false
+  },
+  {
+    "id": "p12", "slug": "swiss-alps-luxury-chalet", "title": "Swiss Alps Luxury Chalet", "destination": "Zermatt, Switzerland",
+    "category": "luxury-holidays", "image": "https://picsum.photos/seed/pkg-swiss/1200/900",
+    "price": 2699, "duration": "6 nights", "airline": "Swiss International",
+    "hotelRating": 5, "hotelName": "The Omnia", "transfersIncluded": true, "boardBasis": "Half Board",
+    "highlights": ["Private chalet suite", "Matterhorn glacier excursion", "In-room spa treatments"],
+    "description": "Alpine grandeur, private suites and Matterhorn views from every window.",
+    "featured": false
+  },
+  {
+    "id": "p13", "slug": "zanzibar-beach-escape", "title": "Zanzibar Beach Escape", "destination": "Zanzibar, Tanzania",
+    "category": "beach-holidays", "image": "https://picsum.photos/seed/pkg-zanzibar/1200/900",
+    "price": 999, "originalPrice": 1199, "duration": "8 nights", "airline": "Ethiopian Airlines",
+    "hotelRating": 5, "hotelName": "Baraza Resort & Spa", "transfersIncluded": true, "boardBasis": "All Inclusive",
+    "highlights": ["Spice island tour", "Sunset dhow cruise", "Private beach cabana"],
+    "description": "Powder-white sands and Swahili charm on the Indian Ocean's finest island.",
+    "featured": true, "offerEndsAt": "2026-09-20"
+  },
+  {
+    "id": "p14", "slug": "cape-town-family-safari", "title": "Cape Town & Safari Combo", "destination": "Cape Town, South Africa",
+    "category": "family-holidays", "image": "https://picsum.photos/seed/pkg-capetown/1200/900",
+    "price": 1599, "duration": "9 nights", "airline": "Emirates",
+    "hotelRating": 4, "hotelName": "The Cape Milner", "transfersIncluded": true, "boardBasis": "Bed & Breakfast",
+    "highlights": ["Table Mountain cable car", "Private game drive", "Penguin colony visit"],
+    "description": "City glamour meets big-five safari on this unforgettable family combination.",
+    "featured": false
+  },
+  {
+    "id": "p15", "slug": "santorini-honeymoon", "title": "Santorini Honeymoon Special", "destination": "Santorini, Greece",
+    "category": "special-offers", "image": "https://picsum.photos/seed/pkg-santorini/1200/900",
+    "price": 1099, "originalPrice": 1399, "duration": "6 nights", "airline": "Aegean Airlines",
+    "hotelRating": 5, "hotelName": "Canaves Oia Suites", "transfersIncluded": true, "boardBasis": "Bed & Breakfast",
+    "highlights": ["Caldera-view suite", "Private sunset catamaran", "Couples spa evening"],
+    "description": "Whitewashed cliffs, caldera sunsets and suites built for two — a limited-time saving.",
+    "featured": true, "offerEndsAt": "2026-08-31"
+  },
+  {
+    "id": "p16", "slug": "new-york-city-lights", "title": "New York City Lights", "destination": "New York, USA",
+    "category": "special-offers", "image": "https://picsum.photos/seed/pkg-nyc/1200/900",
+    "price": 649, "originalPrice": 799, "duration": "5 nights", "airline": "Virgin Atlantic",
+    "hotelRating": 4, "hotelName": "The Roosevelt Hotel", "transfersIncluded": false, "boardBasis": "Room Only",
+    "highlights": ["Broadway show ticket", "Empire State Building access", "Manhattan skyline cruise"],
+    "description": "Five nights in the city that never sleeps, with a Broadway night thrown in.",
+    "featured": true, "offerEndsAt": "2026-09-10"
+  }
+]

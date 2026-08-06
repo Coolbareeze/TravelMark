@@ -1,0 +1,32 @@
+[
+  {
+    "id": "t1", "name": "Amina Hassan", "location": "Birmingham, UK", "rating": 5,
+    "quote": "Travel Mark arranged our entire family trip to Mogadishu without a single hiccup — visas, flights, transfers, all sorted. It felt like having a personal travel manager.",
+    "trip": "Family trip to Mogadishu", "avatar": "https://i.pravatar.cc/150?img=32"
+  },
+  {
+    "id": "t2", "name": "James Whitfield", "location": "London, UK", "rating": 5,
+    "quote": "Booked a last-minute business trip to Dubai and they had me on a flight within hours, plus lounge access sorted. Genuinely the best travel consultants I've used.",
+    "trip": "Business travel to Dubai", "avatar": "https://i.pravatar.cc/150?img=12"
+  },
+  {
+    "id": "t3", "name": "Fatima Ahmed", "location": "Manchester, UK", "rating": 5,
+    "quote": "Our Umrah package was handled with so much care — five-star hotels right by the Haram and a guide who genuinely knew what they were doing. Would book again in a heartbeat.",
+    "trip": "Premium Umrah Package", "avatar": "https://i.pravatar.cc/150?img=45"
+  },
+  {
+    "id": "t4", "name": "Sarah & Michael Reyes", "location": "Leeds, UK", "rating": 5,
+    "quote": "The Maldives honeymoon they put together exceeded every expectation. Every detail, from the seaplane transfer to the villa upgrade, was thought through in advance.",
+    "trip": "Maldives honeymoon", "avatar": "https://i.pravatar.cc/150?img=5"
+  },
+  {
+    "id": "t5", "name": "Omar Farah", "location": "Cardiff, UK", "rating": 5,
+    "quote": "I've used Travel Mark three times now for trips back to Hargeisa. Consistently the best fares and they actually pick up the phone when things change.",
+    "trip": "Flights to Hargeisa", "avatar": "https://i.pravatar.cc/150?img=51"
+  },
+  {
+    "id": "t6", "name": "Charlotte Bennett", "location": "Bristol, UK", "rating": 5,
+    "quote": "Our Bali family holiday was seamless — kids' activities booked, transfers on time, and a 24/7 WhatsApp line whenever we needed reassurance. Highly recommend.",
+    "trip": "Family holiday to Bali", "avatar": "https://i.pravatar.cc/150?img=25"
+  }
+]

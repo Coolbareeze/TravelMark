@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-surface text-ink font-body antialiased;
+  }
+  .dark body {
+    @apply bg-navy-950 text-white;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading text-navy-900 dark:text-white;
+  }
+  ::selection {
+    @apply bg-gold-200 text-navy-900;
+  }
+  :focus-visible {
+    @apply outline-none ring-2 ring-sky-500 ring-offset-2 ring-offset-white dark:ring-offset-navy-900;
+  }
+}
+
+@layer components {
+  /* Premium section container rhythm */
+  .section {
+    @apply py-20 md:py-28;
+  }
+
+  /* Glass navigation surface used by the sticky header */
+  .glass-surface {
+    @apply bg-white/80 backdrop-blur-xl backdrop-saturate-150 dark:bg-navy-900/80;
+  }
+
+  /* Reusable "eyebrow" label above section headings */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-gold-600;
+  }
+
+  /* Card lift micro-interaction */
+  .card-lift {
+    @apply transition-all duration-500 ease-premium hover:-translate-y-1.5 hover:shadow-elevated;
+  }
+
+  /* Skip link for keyboard/screen-reader users */
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-navy-900 focus:px-5 focus:py-3 focus:text-sm focus:font-semibold focus:text-white;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .bg-noise {
+    background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
+    background-size: 3px 3px;
+  }
+}
+
+@keyframes ripple {
+  from {
+    transform: scale(0);
+    opacity: 0.55;
+  }
+  to {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+/* Custom scrollbar — subtle, premium */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(7, 27, 51, 0.25);
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}

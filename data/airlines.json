@@ -1,0 +1,14 @@
+[
+  { "id": "a1", "name": "British Airways", "logo": "/images/airlines/british-airways.svg" },
+  { "id": "a2", "name": "Emirates", "logo": "/images/airlines/emirates.svg" },
+  { "id": "a3", "name": "Qatar Airways", "logo": "/images/airlines/qatar-airways.svg" },
+  { "id": "a4", "name": "Turkish Airlines", "logo": "/images/airlines/turkish-airlines.svg" },
+  { "id": "a5", "name": "Etihad Airways", "logo": "/images/airlines/etihad-airways.svg" },
+  { "id": "a6", "name": "Lufthansa", "logo": "/images/airlines/lufthansa.svg" },
+  { "id": "a7", "name": "KLM", "logo": "/images/airlines/klm.svg" },
+  { "id": "a8", "name": "Virgin Atlantic", "logo": "/images/airlines/virgin-atlantic.svg" },
+  { "id": "a9", "name": "Saudia", "logo": "/images/airlines/saudia.svg" },
+  { "id": "a10", "name": "Ethiopian Airlines", "logo": "/images/airlines/ethiopian-airlines.svg" },
+  { "id": "a11", "name": "Singapore Airlines", "logo": "/images/airlines/singapore-airlines.svg" },
+  { "id": "a12", "name": "Air France", "logo": "/images/airlines/air-france.svg" }
+]

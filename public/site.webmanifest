@@ -1,0 +1,12 @@
+{
+  "name": "Travel Mark Ltd",
+  "short_name": "Travel Mark",
+  "description": "Premium UK travel agency — flights, holidays, Umrah & Hajj packages.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F7F8FA",
+  "theme_color": "#071B33",
+  "icons": [
+    { "src": "/images/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

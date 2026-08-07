@@ -2,6 +2,93 @@
 @tailwind components;
 @tailwind utilities;
 
+/* --------------------------------------------------------------------
+   Theme tokens (RGB triplets, no commas — feeds Tailwind's
+   rgb(var(--x) / <alpha-value>) pattern in tailwind.config.ts).
+   :root = the LIVE navy/gold aviation palette (unchanged site-wide).
+   .theme-preview = Opodo-style black/orange palette, scoped only to the
+   temporary /home1 preview route. Nothing else on the site is affected.
+   -------------------------------------------------------------------- */
+:root {
+  --tm-navy-50: 234 240 247;
+  --tm-navy-100: 203 218 234;
+  --tm-navy-200: 157 185 214;
+  --tm-navy-300: 110 151 193;
+  --tm-navy-400: 63 118 172;
+  --tm-navy-500: 30 86 136;
+  --tm-navy-600: 18 62 104;
+  --tm-navy-700: 12 44 76;
+  --tm-navy-800: 8 31 56;
+  --tm-navy-900: 7 27 51;
+  --tm-navy-950: 4 15 29;
+
+  --tm-royal-50: 234 243 251;
+  --tm-royal-100: 203 225 244;
+  --tm-royal-200: 156 197 233;
+  --tm-royal-300: 109 169 221;
+  --tm-royal-400: 62 141 209;
+  --tm-royal-500: 29 113 184;
+  --tm-royal-600: 10 77 140;
+  --tm-royal-700: 8 61 112;
+  --tm-royal-800: 6 46 84;
+  --tm-royal-900: 4 30 56;
+
+  --tm-gold-50: 251 246 232;
+  --tm-gold-100: 244 231 192;
+  --tm-gold-200: 234 212 141;
+  --tm-gold-300: 223 193 90;
+  --tm-gold-400: 213 174 57;
+  --tm-gold-500: 200 154 43;
+  --tm-gold-600: 166 125 32;
+  --tm-gold-700: 125 95 24;
+  --tm-gold-800: 84 64 17;
+  --tm-gold-900: 43 33 9;
+
+  --tm-success-50: 229 249 241;
+  --tm-success-500: 0 168 107;
+  --tm-success-600: 0 135 90;
+}
+
+.theme-preview {
+  --tm-navy-50: 244 244 244;
+  --tm-navy-100: 226 226 226;
+  --tm-navy-200: 196 196 196;
+  --tm-navy-300: 156 156 156;
+  --tm-navy-400: 118 118 118;
+  --tm-navy-500: 84 84 84;
+  --tm-navy-600: 61 61 61;
+  --tm-navy-700: 43 43 43;
+  --tm-navy-800: 31 31 31;
+  --tm-navy-900: 22 22 22;
+  --tm-navy-950: 10 10 10;
+
+  --tm-royal-50: 242 242 242;
+  --tm-royal-100: 212 212 212;
+  --tm-royal-200: 166 166 166;
+  --tm-royal-300: 122 122 122;
+  --tm-royal-400: 89 89 89;
+  --tm-royal-500: 61 61 61;
+  --tm-royal-600: 43 43 43;
+  --tm-royal-700: 31 31 31;
+  --tm-royal-800: 23 23 23;
+  --tm-royal-900: 16 16 16;
+
+  --tm-gold-50: 255 243 234;
+  --tm-gold-100: 255 224 204;
+  --tm-gold-200: 255 193 153;
+  --tm-gold-300: 255 155 92;
+  --tm-gold-400: 255 122 46;
+  --tm-gold-500: 245 97 12;
+  --tm-gold-600: 214 82 10;
+  --tm-gold-700: 176 66 8;
+  --tm-gold-800: 122 45 6;
+  --tm-gold-900: 74 26 3;
+
+  --tm-success-50: 229 249 245;
+  --tm-success-500: 0 169 143;
+  --tm-success-600: 0 135 111;
+}
+
 @layer base {
   :root {
     color-scheme: light;

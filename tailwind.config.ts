@@ -1,9 +1,14 @@
 import type { Config } from "tailwindcss";
 
 // Travel Mark Ltd — brand design system
-// Aviation-inspired luxury palette: deep navy + royal blue + gold on a
-// near-white canvas, with a single sky-blue accent reserved for interactive
-// states. No bright gradients — premium soft shadows and generous radii only.
+//
+// Colors are wired through CSS custom properties (--tm-*, defined in
+// globals.css) rather than raw hex, so a scoped wrapper class can swap the
+// entire palette for a subtree without touching this file or any component.
+// Default (:root) values are the LIVE navy/gold aviation palette; the
+// `.theme-preview` class (used only by the temporary /home1 preview route)
+// swaps them for an Opodo-style black + orange palette. Every component
+// still just uses bg-navy-900 / text-gold-400 / etc. as before.
 const config: Config = {
   darkMode: "class",
   content: [
@@ -20,44 +25,44 @@ const config: Config = {
     extend: {
       colors: {
         navy: {
-          DEFAULT: "#071B33",
-          50: "#EAF0F7",
-          100: "#CBDAEA",
-          200: "#9DB9D6",
-          300: "#6E97C1",
-          400: "#3F76AC",
-          500: "#1E5688",
-          600: "#123E68",
-          700: "#0C2C4C",
-          800: "#081F38",
-          900: "#071B33",
-          950: "#040F1D",
+          DEFAULT: "rgb(var(--tm-navy-900) / <alpha-value>)",
+          50: "rgb(var(--tm-navy-50) / <alpha-value>)",
+          100: "rgb(var(--tm-navy-100) / <alpha-value>)",
+          200: "rgb(var(--tm-navy-200) / <alpha-value>)",
+          300: "rgb(var(--tm-navy-300) / <alpha-value>)",
+          400: "rgb(var(--tm-navy-400) / <alpha-value>)",
+          500: "rgb(var(--tm-navy-500) / <alpha-value>)",
+          600: "rgb(var(--tm-navy-600) / <alpha-value>)",
+          700: "rgb(var(--tm-navy-700) / <alpha-value>)",
+          800: "rgb(var(--tm-navy-800) / <alpha-value>)",
+          900: "rgb(var(--tm-navy-900) / <alpha-value>)",
+          950: "rgb(var(--tm-navy-950) / <alpha-value>)",
         },
         royal: {
-          DEFAULT: "#0A4D8C",
-          50: "#EAF3FB",
-          100: "#CBE1F4",
-          200: "#9CC5E9",
-          300: "#6DA9DD",
-          400: "#3E8DD1",
-          500: "#1D71B8",
-          600: "#0A4D8C",
-          700: "#083D70",
-          800: "#062E54",
-          900: "#041E38",
+          DEFAULT: "rgb(var(--tm-royal-600) / <alpha-value>)",
+          50: "rgb(var(--tm-royal-50) / <alpha-value>)",
+          100: "rgb(var(--tm-royal-100) / <alpha-value>)",
+          200: "rgb(var(--tm-royal-200) / <alpha-value>)",
+          300: "rgb(var(--tm-royal-300) / <alpha-value>)",
+          400: "rgb(var(--tm-royal-400) / <alpha-value>)",
+          500: "rgb(var(--tm-royal-500) / <alpha-value>)",
+          600: "rgb(var(--tm-royal-600) / <alpha-value>)",
+          700: "rgb(var(--tm-royal-700) / <alpha-value>)",
+          800: "rgb(var(--tm-royal-800) / <alpha-value>)",
+          900: "rgb(var(--tm-royal-900) / <alpha-value>)",
         },
         gold: {
-          DEFAULT: "#C89A2B",
-          50: "#FBF6E8",
-          100: "#F4E7C0",
-          200: "#EAD48D",
-          300: "#DFC15A",
-          400: "#D5AE39",
-          500: "#C89A2B",
-          600: "#A67D20",
-          700: "#7D5F18",
-          800: "#544011",
-          900: "#2B2109",
+          DEFAULT: "rgb(var(--tm-gold-500) / <alpha-value>)",
+          50: "rgb(var(--tm-gold-50) / <alpha-value>)",
+          100: "rgb(var(--tm-gold-100) / <alpha-value>)",
+          200: "rgb(var(--tm-gold-200) / <alpha-value>)",
+          300: "rgb(var(--tm-gold-300) / <alpha-value>)",
+          400: "rgb(var(--tm-gold-400) / <alpha-value>)",
+          500: "rgb(var(--tm-gold-500) / <alpha-value>)",
+          600: "rgb(var(--tm-gold-600) / <alpha-value>)",
+          700: "rgb(var(--tm-gold-700) / <alpha-value>)",
+          800: "rgb(var(--tm-gold-800) / <alpha-value>)",
+          900: "rgb(var(--tm-gold-900) / <alpha-value>)",
         },
         sky: {
           DEFAULT: "#3AA8FF",
@@ -68,10 +73,10 @@ const config: Config = {
           600: "#0E8CF0",
         },
         success: {
-          DEFAULT: "#00A86B",
-          50: "#E5F9F1",
-          500: "#00A86B",
-          600: "#00875A",
+          DEFAULT: "rgb(var(--tm-success-500) / <alpha-value>)",
+          50: "rgb(var(--tm-success-50) / <alpha-value>)",
+          500: "rgb(var(--tm-success-500) / <alpha-value>)",
+          600: "rgb(var(--tm-success-600) / <alpha-value>)",
         },
         surface: "#F7F8FA",
         ink: "#1B1F23",
@@ -91,15 +96,15 @@ const config: Config = {
         xl3: "1.75rem",
       },
       boxShadow: {
-        soft: "0 2px 8px -2px rgba(7,27,51,0.06), 0 8px 24px -8px rgba(7,27,51,0.08)",
-        elevated: "0 8px 30px -8px rgba(7,27,51,0.16), 0 24px 60px -24px rgba(7,27,51,0.18)",
-        gold: "0 8px 24px -6px rgba(200,154,43,0.35)",
-        "inner-line": "inset 0 0 0 1px rgba(7,27,51,0.06)",
+        soft: "0 2px 8px -2px rgb(var(--tm-navy-900) / 0.06), 0 8px 24px -8px rgb(var(--tm-navy-900) / 0.08)",
+        elevated: "0 8px 30px -8px rgb(var(--tm-navy-900) / 0.16), 0 24px 60px -24px rgb(var(--tm-navy-900) / 0.18)",
+        gold: "0 8px 24px -6px rgb(var(--tm-gold-500) / 0.35)",
+        "inner-line": "inset 0 0 0 1px rgb(var(--tm-navy-900) / 0.06)",
       },
       backgroundImage: {
-        "navy-fade": "linear-gradient(180deg, rgba(7,27,51,0) 0%, rgba(7,27,51,0.92) 100%)",
-        "hero-scrim": "linear-gradient(180deg, rgba(4,15,29,0.55) 0%, rgba(4,15,29,0.35) 40%, rgba(4,15,29,0.85) 100%)",
-        "gold-line": "linear-gradient(90deg, transparent 0%, #C89A2B 50%, transparent 100%)",
+        "navy-fade": "linear-gradient(180deg, rgb(var(--tm-navy-950) / 0) 0%, rgb(var(--tm-navy-950) / 0.92) 100%)",
+        "hero-scrim": "linear-gradient(180deg, rgb(var(--tm-navy-950) / 0.55) 0%, rgb(var(--tm-navy-950) / 0.35) 40%, rgb(var(--tm-navy-950) / 0.85) 100%)",
+        "gold-line": "linear-gradient(90deg, transparent 0%, rgb(var(--tm-gold-500)) 50%, transparent 100%)",
       },
       keyframes: {
         "fade-in": { "0%": { opacity: "0" }, "100%": { opacity: "1" } },
@@ -112,9 +117,9 @@ const config: Config = {
           "50%": { transform: "translateY(-10px)" },
         },
         "pulse-ring": {
-          "0%": { boxShadow: "0 0 0 0 rgba(0,168,107,0.5)" },
-          "70%": { boxShadow: "0 0 0 12px rgba(0,168,107,0)" },
-          "100%": { boxShadow: "0 0 0 0 rgba(0,168,107,0)" },
+          "0%": { boxShadow: "0 0 0 0 rgb(var(--tm-success-500) / 0.5)" },
+          "70%": { boxShadow: "0 0 0 12px rgb(var(--tm-success-500) / 0)" },
+          "100%": { boxShadow: "0 0 0 0 rgb(var(--tm-success-500) / 0)" },
         },
         marquee: {
           "0%": { transform: "translateX(0)" },

@@ -15,13 +15,19 @@ import { LoadingScreen } from "@/components/layout/LoadingScreen";
 export function SiteChrome({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const isAdmin = pathname?.startsWith("/admin");
+  // /home1 is a temporary, unlinked route used to preview an alternate
+  // color scheme — see app/home1/page.tsx and the `.theme-preview` tokens
+  // in globals.css. Wrapping the whole chrome (not just the page content)
+  // in that class here means the header/footer/floating buttons preview
+  // consistently too, without affecting any other route.
+  const isColorPreview = pathname?.startsWith("/home1");
 
   if (isAdmin) {
     return <>{children}</>;
   }
 
   return (
-    <>
+    <div className={isColorPreview ? "theme-preview" : undefined}>
       <LoadingScreen />
       <Header />
       <main id="main-content" className="min-h-screen pb-16 pt-20 md:pb-0">
@@ -31,6 +37,6 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
       <FloatingActions />
       <MobileBottomBar />
       <CookieBanner />
-    </>
+    </div>
   );
 }

@@ -4,13 +4,13 @@ import { COMPANY } from "@/lib/constants";
 
 export function CtaBanner() {
   return (
-    <section className="bg-gold-500">
+    <section className="bg-accent-500">
       <div className="container flex flex-col items-center gap-6 py-14 text-center md:flex-row md:justify-between md:text-left">
         <div>
-          <h2 className="font-heading text-2xl font-bold text-navy-900 md:text-3xl">
+          <h2 className="font-heading text-2xl font-bold text-accent-fg md:text-3xl">
             Ready to book your next adventure?
           </h2>
-          <p className="mt-1 text-navy-900/70">
+          <p className="mt-1 text-accent-fg/70">
             Speak to a consultant today — no call centres, no scripts, just real advice.
           </p>
         </div>
@@ -22,7 +22,7 @@ export function CtaBanner() {
             href={`${COMPANY.whatsappHref}`}
             variant="outline"
             size="lg"
-            className="!border-navy-900/20 !bg-white"
+            className="!border-accent-fg/20 !bg-white"
           >
             <MessageCircle className="h-4 w-4" /> Chat on WhatsApp
           </Button>

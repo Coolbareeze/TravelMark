@@ -1,4 +1,5 @@
 "use client";
+
 import Link from "next/link";
 import { forwardRef } from "react";
 import { cn } from "@/lib/utils";
@@ -14,7 +15,7 @@ const variants: Record<Variant, string> = {
     "bg-navy-900 text-white shadow-soft hover:bg-navy-800 hover:shadow-elevated active:bg-navy-900",
   secondary:
     "bg-royal-600 text-white shadow-soft hover:bg-royal-700 hover:shadow-elevated",
-  gold: "bg-gold-500 text-navy-900 shadow-gold hover:bg-gold-400",
+  gold: "bg-accent-500 text-accent-fg shadow-accent hover:bg-accent-400",
   outline:
     "border border-navy-900/15 bg-white text-navy-900 hover:border-navy-900/30 hover:bg-navy-50 dark:bg-transparent dark:text-white dark:border-white/20 dark:hover:bg-white/5",
   ghost: "text-navy-900 hover:bg-navy-900/5 dark:text-white dark:hover:bg-white/10",

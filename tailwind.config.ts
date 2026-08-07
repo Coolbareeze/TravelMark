@@ -78,8 +78,27 @@ const config: Config = {
           500: "rgb(var(--tm-success-500) / <alpha-value>)",
           600: "rgb(var(--tm-success-600) / <alpha-value>)",
         },
-        surface: "#F7F8FA",
-        ink: "#1B1F23",
+        // "accent" = primary CTA / interactive-highlight role (Button's
+        // "gold" variant, search + newsletter submit buttons, CtaBanner).
+        // Kept separate from "gold" so a scope (e.g. /home2's teal, or the
+        // Islamic emerald theme) can give CTAs a different hue than
+        // badges/stars/eyebrows without touching any component classes.
+        accent: {
+          DEFAULT: "rgb(var(--tm-accent-500) / <alpha-value>)",
+          50: "rgb(var(--tm-accent-50) / <alpha-value>)",
+          100: "rgb(var(--tm-accent-100) / <alpha-value>)",
+          200: "rgb(var(--tm-accent-200) / <alpha-value>)",
+          300: "rgb(var(--tm-accent-300) / <alpha-value>)",
+          400: "rgb(var(--tm-accent-400) / <alpha-value>)",
+          500: "rgb(var(--tm-accent-500) / <alpha-value>)",
+          600: "rgb(var(--tm-accent-600) / <alpha-value>)",
+          700: "rgb(var(--tm-accent-700) / <alpha-value>)",
+          800: "rgb(var(--tm-accent-800) / <alpha-value>)",
+          900: "rgb(var(--tm-accent-900) / <alpha-value>)",
+          fg: "rgb(var(--tm-accent-fg) / <alpha-value>)",
+        },
+        surface: "rgb(var(--tm-surface) / <alpha-value>)",
+        ink: "rgb(var(--tm-ink) / <alpha-value>)",
       },
       fontFamily: {
         heading: ["var(--font-manrope)", "system-ui", "sans-serif"],
@@ -99,6 +118,7 @@ const config: Config = {
         soft: "0 2px 8px -2px rgb(var(--tm-navy-900) / 0.06), 0 8px 24px -8px rgb(var(--tm-navy-900) / 0.08)",
         elevated: "0 8px 30px -8px rgb(var(--tm-navy-900) / 0.16), 0 24px 60px -24px rgb(var(--tm-navy-900) / 0.18)",
         gold: "0 8px 24px -6px rgb(var(--tm-gold-500) / 0.35)",
+        accent: "0 8px 24px -6px rgb(var(--tm-accent-500) / 0.35)",
         "inner-line": "inset 0 0 0 1px rgb(var(--tm-navy-900) / 0.06)",
       },
       backgroundImage: {

@@ -5,9 +5,25 @@
 /* --------------------------------------------------------------------
    Theme tokens (RGB triplets, no commas — feeds Tailwind's
    rgb(var(--x) / <alpha-value>) pattern in tailwind.config.ts).
-   :root = the LIVE navy/gold aviation palette (unchanged site-wide).
-   .theme-preview = Opodo-style black/orange palette, scoped only to the
-   temporary /home1 preview route. Nothing else on the site is affected.
+
+   :root            = the LIVE navy/gold aviation palette (unchanged
+                       site-wide — every page not listed below).
+   .theme-preview   = Opodo-style black/orange palette, scoped only to
+                       the temporary /home1 preview route.
+   .theme-preview-v2 = Navy/Teal/Gold palette, scoped only to the
+                       temporary /home2 preview route (general pages).
+   .theme-islamic   = Deep Emerald/Islamic Gold/Ivory palette, scoped
+                       only to the temporary /home2-umrah preview route
+                       (Hajj/Umrah pages).
+
+   `accent` is a separate token from `gold`: it drives primary CTA
+   buttons (Button's "gold" variant, the search-widget submit button,
+   the newsletter submit button, the CtaBanner section) while `gold`
+   itself stays reserved for badges/stars/eyebrows/selected-states —
+   this split only matters once a scope repoints them to different
+   hues (home2's teal accent vs. literal gold badges); on the live
+   site both still resolve to the same colour as before, so nothing
+   changes there.
    -------------------------------------------------------------------- */
 :root {
   --tm-navy-50: 234 240 247;
@@ -47,6 +63,23 @@
   --tm-success-50: 229 249 241;
   --tm-success-500: 0 168 107;
   --tm-success-600: 0 135 90;
+
+  /* accent == gold on the live site today (Button's CTA variant already
+     used text-navy-900 on a gold-500 background) */
+  --tm-accent-50: 251 246 232;
+  --tm-accent-100: 244 231 192;
+  --tm-accent-200: 234 212 141;
+  --tm-accent-300: 223 193 90;
+  --tm-accent-400: 213 174 57;
+  --tm-accent-500: 200 154 43;
+  --tm-accent-600: 166 125 32;
+  --tm-accent-700: 125 95 24;
+  --tm-accent-800: 84 64 17;
+  --tm-accent-900: 43 33 9;
+  --tm-accent-fg: 7 27 51;
+
+  --tm-surface: 247 248 250;
+  --tm-ink: 27 31 35;
 }
 
 .theme-preview {
@@ -87,6 +120,142 @@
   --tm-success-50: 229 249 245;
   --tm-success-500: 0 169 143;
   --tm-success-600: 0 135 111;
+
+  --tm-accent-50: 255 243 234;
+  --tm-accent-100: 255 224 204;
+  --tm-accent-200: 255 193 153;
+  --tm-accent-300: 255 155 92;
+  --tm-accent-400: 255 122 46;
+  --tm-accent-500: 245 97 12;
+  --tm-accent-600: 214 82 10;
+  --tm-accent-700: 176 66 8;
+  --tm-accent-800: 122 45 6;
+  --tm-accent-900: 74 26 3;
+  --tm-accent-fg: 22 22 22;
+
+  --tm-surface: 247 248 250;
+  --tm-ink: 27 31 35;
+}
+
+/* /home2 preview — general TravelMark theme: Navy + Teal + Gold */
+.theme-preview-v2 {
+  --tm-navy-50: 232 238 246;
+  --tm-navy-100: 200 215 232;
+  --tm-navy-200: 150 180 210;
+  --tm-navy-300: 100 143 185;
+  --tm-navy-400: 60 108 156;
+  --tm-navy-500: 35 82 130;
+  --tm-navy-600: 27 66 108;
+  --tm-navy-700: 21 53 90;
+  --tm-navy-800: 16 42 74;
+  --tm-navy-900: 11 31 58;
+  --tm-navy-950: 6 16 30;
+
+  /* royal = secondary interactive (links/focus/outline) — same teal
+     family as accent so links and buttons read as one cohesive hue */
+  --tm-royal-50: 240 247 247;
+  --tm-royal-100: 214 235 236;
+  --tm-royal-200: 173 214 216;
+  --tm-royal-300: 122 189 192;
+  --tm-royal-400: 68 158 163;
+  --tm-royal-500: 8 126 139;
+  --tm-royal-600: 7 104 115;
+  --tm-royal-700: 6 82 91;
+  --tm-royal-800: 5 60 66;
+  --tm-royal-900: 3 38 42;
+
+  /* gold = literal Accent Gold — badges, stars, eyebrows, selected states */
+  --tm-gold-50: 253 247 232;
+  --tm-gold-100: 249 234 195;
+  --tm-gold-200: 240 213 141;
+  --tm-gold-300: 231 192 87;
+  --tm-gold-400: 223 175 62;
+  --tm-gold-500: 212 167 44;
+  --tm-gold-600: 176 139 36;
+  --tm-gold-700: 133 105 27;
+  --tm-gold-800: 88 70 18;
+  --tm-gold-900: 44 35 9;
+
+  --tm-success-50: 229 249 241;
+  --tm-success-500: 0 168 107;
+  --tm-success-600: 0 135 90;
+
+  /* accent = Teal — primary CTA buttons, search/newsletter submit, links */
+  --tm-accent-50: 240 247 247;
+  --tm-accent-100: 214 235 236;
+  --tm-accent-200: 173 214 216;
+  --tm-accent-300: 122 189 192;
+  --tm-accent-400: 68 158 163;
+  --tm-accent-500: 8 126 139;
+  --tm-accent-600: 7 104 115;
+  --tm-accent-700: 6 82 91;
+  --tm-accent-800: 5 60 66;
+  --tm-accent-900: 3 38 42;
+  --tm-accent-fg: 255 255 255;
+
+  --tm-surface: 244 247 248;
+  --tm-ink: 30 41 51;
+}
+
+/* /home2-umrah preview — Islamic theme for Hajj/Umrah pages */
+.theme-islamic {
+  /* navy role -> Deep Emerald: header/hero/footer/major headings */
+  --tm-navy-50: 235 247 240;
+  --tm-navy-100: 205 235 220;
+  --tm-navy-200: 150 215 190;
+  --tm-navy-300: 90 195 160;
+  --tm-navy-400: 40 170 130;
+  --tm-navy-500: 18 150 113;
+  --tm-navy-600: 13 130 98;
+  --tm-navy-700: 10 110 83;
+  --tm-navy-800: 8 94 71;
+  --tm-navy-900: 6 78 59;
+  --tm-navy-950: 3 26 20;
+
+  /* royal = secondary interactive, same Emerald family as accent */
+  --tm-royal-50: 232 247 241;
+  --tm-royal-100: 199 235 221;
+  --tm-royal-200: 143 214 189;
+  --tm-royal-300: 87 193 157;
+  --tm-royal-400: 45 161 125;
+  --tm-royal-500: 8 127 91;
+  --tm-royal-600: 7 105 75;
+  --tm-royal-700: 6 83 60;
+  --tm-royal-800: 4 61 44;
+  --tm-royal-900: 3 39 28;
+
+  /* gold = Islamic Gold — CTA accents, package highlights, stars/borders */
+  --tm-gold-50: 251 245 231;
+  --tm-gold-100: 246 232 195;
+  --tm-gold-200: 236 210 141;
+  --tm-gold-300: 226 188 87;
+  --tm-gold-400: 214 175 63;
+  --tm-gold-500: 201 162 39;
+  --tm-gold-600: 168 135 33;
+  --tm-gold-700: 126 102 25;
+  --tm-gold-800: 84 68 16;
+  --tm-gold-900: 42 34 8;
+
+  --tm-success-50: 229 249 241;
+  --tm-success-500: 0 168 107;
+  --tm-success-600: 0 135 90;
+
+  /* accent = Emerald — buttons, links, cards, icons, hover states */
+  --tm-accent-50: 232 247 241;
+  --tm-accent-100: 199 235 221;
+  --tm-accent-200: 143 214 189;
+  --tm-accent-300: 87 193 157;
+  --tm-accent-400: 45 161 125;
+  --tm-accent-500: 8 127 91;
+  --tm-accent-600: 7 105 75;
+  --tm-accent-700: 6 83 60;
+  --tm-accent-800: 4 61 44;
+  --tm-accent-900: 3 39 28;
+  --tm-accent-fg: 255 255 255;
+
+  /* Warm Ivory background + dark Islamic text */
+  --tm-surface: 250 248 241;
+  --tm-ink: 23 35 31;
 }
 
 @layer base {

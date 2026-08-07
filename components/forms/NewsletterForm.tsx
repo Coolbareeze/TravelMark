@@ -50,7 +50,7 @@ export function NewsletterForm({ variant = "light" }: { variant?: "light" | "dar
             placeholder="Your email address"
             aria-label="Email address"
             className={cn(
-              "h-12 w-full rounded-full border px-5 text-sm outline-none transition focus:ring-2 focus:ring-gold-500/40",
+              "h-12 w-full rounded-full border px-5 text-sm outline-none transition focus:ring-2 focus:ring-accent-500/40",
               variant === "dark"
                 ? "border-white/15 bg-white/5 text-white placeholder:text-white/40"
                 : "border-navy-900/12 bg-white text-navy-900 placeholder:text-navy-900/35"
@@ -62,7 +62,7 @@ export function NewsletterForm({ variant = "light" }: { variant?: "light" | "dar
           type="submit"
           disabled={status === "loading"}
           aria-label="Subscribe"
-          className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-gold-500 text-navy-900 transition hover:bg-gold-400 disabled:opacity-60"
+          className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-accent-500 text-accent-fg transition hover:bg-accent-400 disabled:opacity-60"
         >
           {status === "loading" ? (
             <Loader2 className="h-5 w-5 animate-spin" />

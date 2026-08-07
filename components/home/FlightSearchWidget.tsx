@@ -153,7 +153,7 @@ export function FlightSearchWidget({ className }: { className?: string }) {
 
           <button
             type="submit"
-            className="group flex h-14 items-center justify-center gap-2 rounded-xl2 bg-gold-500 px-6 font-heading font-bold text-navy-900 shadow-gold transition hover:bg-gold-400 md:col-span-2"
+            className="group flex h-14 items-center justify-center gap-2 rounded-xl2 bg-accent-500 px-6 font-heading font-bold text-accent-fg shadow-accent transition hover:bg-accent-400 md:col-span-2"
           >
             <Search className="h-5 w-5 transition-transform group-hover:scale-110" />
             Search Flights

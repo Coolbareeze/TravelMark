@@ -50,7 +50,7 @@ export async function AirlinesSection({ contrast = false }: AirlinesSectionProps
                 alt={airline.name}
                 width={160}
                 height={40}
-                className="h-8 w-auto object-contain opacity-80 dark:invert"
+                className="h-8 w-auto object-contain"
               />
             </div>
           ))}

@@ -14,10 +14,12 @@ import { buildMetadata } from "@/lib/seo";
 
 // TEMPORARY PREVIEW ROUTE — not linked from navigation, excluded from
 // search indexing. Renders the real homepage sections wrapped in the
-// `.theme-preview` class, which swaps every navy/gold color token to the
-// Opodo-style black/orange palette via CSS variables (see globals.css and
-// tailwind.config.ts). No other page or component is affected — this file
-// can be safely deployed to production and deleted once a decision is made.
+// `.theme-preview` class, which now swaps every navy/gold color token to
+// the OFFICIAL TravelMark brand colors (Pantone 7752 C gold #D4AF37 +
+// Pantone 426 C charcoal #2B2B2D, straight from the brand guidelines PDF
+// and business card) via CSS variables (see globals.css). No other page
+// or component is affected — this file can be safely deployed to
+// production and deleted once a decision is made.
 export const metadata: Metadata = buildMetadata({
   title: "Color Scheme Preview",
   description: "Temporary internal preview — not part of the live site.",
@@ -32,16 +34,16 @@ export default function Home1PreviewPage() {
   return (
     <>
       <div className="relative z-[200] bg-gold-500 px-4 py-2 text-center text-xs font-semibold uppercase tracking-wide text-navy-950">
-        Preview only — new black &amp; orange color scheme. Not linked from the site, not indexed.
+        Preview only — official brand color scheme (from the logo &amp; brand guidelines). Not linked from the site, not indexed.
       </div>
       <Hero />
       <DestinationsSection />
       <PackagesSection />
-      <AirlinesSection />
-      <ServicesSection />
+      <AirlinesSection contrast />
+      <ServicesSection contrast />
       <WhyChooseUsSection />
       <CtaBanner />
-      <TestimonialsSection />
+      <TestimonialsSection contrast />
       <BlogTeaserSection />
       <FaqSection />
       <NewsletterSection />

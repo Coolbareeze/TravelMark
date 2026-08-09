@@ -3,17 +3,25 @@ import { Star, Quote } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Carousel } from "@/components/ui/Carousel";
 import { getTestimonials } from "@/lib/data";
+import { cn } from "@/lib/utils";
 
-export async function TestimonialsSection() {
+interface TestimonialsSectionProps {
+  /** Dark, high-contrast treatment — opt-in so the live site (bg-surface,
+   * as before) is untouched; only /home1 passes this. */
+  contrast?: boolean;
+}
+
+export async function TestimonialsSection({ contrast = false }: TestimonialsSectionProps) {
   const testimonials = await getTestimonials();
 
   return (
-    <section className="section bg-surface dark:bg-navy-900">
+    <section className={cn("section", contrast ? "bg-royal-900" : "bg-surface dark:bg-navy-900")}>
       <div className="container">
         <SectionHeading
           eyebrow="Real Stories"
           title="What Our Travellers Say"
           description="Real reviews from real trips — booked, protected and delivered by Travel Mark."
+          light={contrast}
         />
 
         <div className="mt-14">

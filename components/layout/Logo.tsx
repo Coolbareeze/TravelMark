@@ -16,8 +16,21 @@ export function Logo({ variant = "default", className }: { variant?: "default" |
         width={168}
         height={38}
         priority
-        className="h-9 w-auto"
+        className="h-9 w-auto [.theme-preview_&]:hidden"
       />
+      {/* Real logo artwork (from the brand guidelines), scoped to the
+          /home1 preview only via the .theme-preview wrapper — the light
+          background placeholder above still renders everywhere else. */}
+      {variant !== "white" && (
+        <Image
+          src="/images/logo-brand-horizontal.png"
+          alt="Travel Mark"
+          width={208}
+          height={40}
+          priority
+          className="hidden h-10 w-auto [.theme-preview_&]:block"
+        />
+      )}
     </Link>
   );
 }

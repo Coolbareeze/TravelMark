@@ -82,59 +82,78 @@
   --tm-ink: 27 31 35;
 }
 
+/* /home1 preview — OFFICIAL brand colours, taken directly from the
+   TravelMark Brand Guidelines (v1) and business card: Pantone 7752 C
+   gold (#D4AF37) + Pantone 426 C charcoal (#2B2B2D), with the extended
+   golden-gradient stops from the brand doc (#FFE383, #DEB95A, #D0A83E,
+   #BD922A, #AA7A1A) used for the lighter/darker steps of the gold scale.
+   The brand guide is explicit that the palette is strictly gold +
+   charcoal ("only use the colors shown below"), so no third hue is
+   introduced here — "royal" (secondary interactive) reuses the gold
+   family rather than inventing a new one. */
 .theme-preview {
-  --tm-navy-50: 244 244 244;
-  --tm-navy-100: 226 226 226;
-  --tm-navy-200: 196 196 196;
-  --tm-navy-300: 156 156 156;
-  --tm-navy-400: 118 118 118;
-  --tm-navy-500: 84 84 84;
-  --tm-navy-600: 61 61 61;
-  --tm-navy-700: 43 43 43;
-  --tm-navy-800: 31 31 31;
-  --tm-navy-900: 22 22 22;
-  --tm-navy-950: 10 10 10;
+  --tm-navy-50: 237 237 238;
+  --tm-navy-100: 219 219 220;
+  --tm-navy-200: 186 186 188;
+  --tm-navy-300: 153 153 155;
+  --tm-navy-400: 120 120 122;
+  --tm-navy-500: 90 90 92;
+  --tm-navy-600: 68 68 70;
+  --tm-navy-700: 55 55 57;
+  --tm-navy-800: 49 49 51;
+  --tm-navy-900: 43 43 45;
+  --tm-navy-950: 20 20 21;
 
-  --tm-royal-50: 242 242 242;
-  --tm-royal-100: 212 212 212;
-  --tm-royal-200: 166 166 166;
-  --tm-royal-300: 122 122 122;
-  --tm-royal-400: 89 89 89;
-  --tm-royal-500: 61 61 61;
-  --tm-royal-600: 43 43 43;
-  --tm-royal-700: 31 31 31;
-  --tm-royal-800: 23 23 23;
-  --tm-royal-900: 16 16 16;
+  /* royal = a genuine navy blue (distinct from the charcoal "navy" token
+     above) — the client asked for gray + gold + navy blue, so this token
+     now carries the blue instead of reusing gold. Used for secondary
+     buttons, focus states, and one of the three section backgrounds
+     below, to keep it as a supporting accent rather than the star. */
+  --tm-royal-50: 230 235 243;
+  --tm-royal-100: 199 211 230;
+  --tm-royal-200: 148 168 199;
+  --tm-royal-300: 97 126 168;
+  --tm-royal-400: 60 92 138;
+  --tm-royal-500: 35 65 110;
+  --tm-royal-600: 24 48 87;
+  --tm-royal-700: 18 38 70;
+  --tm-royal-800: 14 29 55;
+  --tm-royal-900: 11 22 42;
 
-  --tm-gold-50: 255 243 234;
-  --tm-gold-100: 255 224 204;
-  --tm-gold-200: 255 193 153;
-  --tm-gold-300: 255 155 92;
-  --tm-gold-400: 255 122 46;
-  --tm-gold-500: 245 97 12;
-  --tm-gold-600: 214 82 10;
-  --tm-gold-700: 176 66 8;
-  --tm-gold-800: 122 45 6;
-  --tm-gold-900: 74 26 3;
+  /* gold — 400 softened/lightened toward the paler official gradient
+     stops (was the same as 400/D0A83E, which reads "orange" at large
+     text sizes); 500 stays the exact Pantone 7752C brand primary for
+     buttons, where higher saturation reads fine at small/high-contrast
+     sizes. */
+  --tm-gold-50: 255 252 240;
+  --tm-gold-100: 255 246 214;
+  --tm-gold-200: 255 227 131;
+  --tm-gold-300: 222 185 90;
+  --tm-gold-400: 222 185 90;
+  --tm-gold-500: 212 175 55;
+  --tm-gold-600: 189 146 42;
+  --tm-gold-700: 170 122 26;
+  --tm-gold-800: 125 90 19;
+  --tm-gold-900: 80 58 12;
 
-  --tm-success-50: 229 249 245;
-  --tm-success-500: 0 169 143;
-  --tm-success-600: 0 135 111;
+  --tm-success-50: 229 249 241;
+  --tm-success-500: 0 168 107;
+  --tm-success-600: 0 135 90;
 
-  --tm-accent-50: 255 243 234;
-  --tm-accent-100: 255 224 204;
-  --tm-accent-200: 255 193 153;
-  --tm-accent-300: 255 155 92;
-  --tm-accent-400: 255 122 46;
-  --tm-accent-500: 245 97 12;
-  --tm-accent-600: 214 82 10;
-  --tm-accent-700: 176 66 8;
-  --tm-accent-800: 122 45 6;
-  --tm-accent-900: 74 26 3;
-  --tm-accent-fg: 22 22 22;
+  --tm-accent-50: 255 252 240;
+  --tm-accent-100: 255 246 214;
+  --tm-accent-200: 255 227 131;
+  --tm-accent-300: 222 185 90;
+  --tm-accent-400: 222 185 90;
+  --tm-accent-500: 212 175 55;
+  --tm-accent-600: 189 146 42;
+  --tm-accent-700: 170 122 26;
+  --tm-accent-800: 125 90 19;
+  --tm-accent-900: 80 58 12;
+  --tm-accent-fg: 43 43 45;
 
   --tm-surface: 247 248 250;
-  --tm-ink: 27 31 35;
+  --tm-ink: 43 43 45;
 }
 
 /* /home2 preview — general TravelMark theme: Navy + Teal + Gold */

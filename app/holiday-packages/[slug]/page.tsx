@@ -33,9 +33,14 @@ export default async function PackageDetailPage({ params }: { params: { slug: st
 
   const allPackages = await getPackages();
   const related = allPackages.filter((p) => p.category === pkg.category && p.id !== pkg.id).slice(0, 3);
+  // Umrah & Hajj packages get the Islamic (Deep Emerald / Islamic Gold /
+  // Warm Ivory) palette, content-only — the header/footer stay in the
+  // main brand theme since this route is shared with every other
+  // package category and SiteChrome can't see this page's data.
+  const isIslamic = pkg.category === "umrah-hajj";
 
   return (
-    <>
+    <div className={isIslamic ? "theme-islamic" : undefined}>
       <JsonLd
         data={breadcrumbJsonLd([
           { name: "Home", path: "/" },
@@ -165,6 +170,6 @@ export default async function PackageDetailPage({ params }: { params: { slug: st
           </div>
         </section>
       )}
-    </>
+    </div>
   );
 }

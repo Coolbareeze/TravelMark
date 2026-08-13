@@ -2,35 +2,22 @@ import Image from "next/image";
 import Link from "next/link";
 
 /**
- * Brand logo. This is a placeholder wordmark — per the brief, the final
- * logo will be supplied separately. Swap /public/images/logo.svg (and
- * logo-white.svg for dark surfaces / favicon.svg) with the real artwork
- * and every usage across the site updates automatically.
+ * Brand logo — real artwork from the TravelMark brand guidelines.
+ * "default" is the dark-text lockup for light surfaces; "white" recolors
+ * the wordmark for dark surfaces (footer, dark mode) while keeping the
+ * gold icon gradient untouched.
  */
 export function Logo({ variant = "default", className }: { variant?: "default" | "white"; className?: string }) {
   return (
     <Link href="/" aria-label="Travel Mark — home" className={className}>
       <Image
-        src={variant === "white" ? "/images/logo-white.svg" : "/images/logo.svg"}
+        src={variant === "white" ? "/images/logo-brand-horizontal-white.png" : "/images/logo-brand-horizontal.png"}
         alt="Travel Mark"
-        width={168}
-        height={38}
+        width={208}
+        height={40}
         priority
-        className="h-9 w-auto [.theme-preview_&]:hidden"
+        className="h-9 w-auto md:h-10"
       />
-      {/* Real logo artwork (from the brand guidelines), scoped to the
-          /home1 preview only via the .theme-preview wrapper — the light
-          background placeholder above still renders everywhere else. */}
-      {variant !== "white" && (
-        <Image
-          src="/images/logo-brand-horizontal.png"
-          alt="Travel Mark"
-          width={208}
-          height={40}
-          priority
-          className="hidden h-10 w-auto [.theme-preview_&]:block"
-        />
-      )}
     </Link>
   );
 }

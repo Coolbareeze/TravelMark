@@ -41,15 +41,15 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: COMPANY.name }],
   icons: {
-    icon: "/images/favicon.svg",
+    icon: "/images/logo-icon-square.png",
   },
   manifest: "/site.webmanifest",
 };
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#071B33" },
-    { media: "(prefers-color-scheme: dark)", color: "#071B33" },
+    { media: "(prefers-color-scheme: light)", color: "#2B2B2D" },
+    { media: "(prefers-color-scheme: dark)", color: "#2B2B2D" },
   ],
   width: "device-width",
   initialScale: 1,

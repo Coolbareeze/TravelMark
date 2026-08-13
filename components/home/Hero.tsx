@@ -21,7 +21,7 @@ export function Hero() {
         loop
         playsInline
         poster="https://picsum.photos/seed/travelmark-hero/1920/1080"
-        className="absolute inset-0 h-full w-full object-cover [.theme-preview_&]:grayscale [.theme-preview_&]:contrast-105"
+        className="absolute inset-0 h-full w-full object-cover grayscale contrast-105"
       >
         <source src="/videos/hero.mp4" type="video/mp4" />
       </video>

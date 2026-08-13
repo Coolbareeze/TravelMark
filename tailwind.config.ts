@@ -5,10 +5,11 @@ import type { Config } from "tailwindcss";
 // Colors are wired through CSS custom properties (--tm-*, defined in
 // globals.css) rather than raw hex, so a scoped wrapper class can swap the
 // entire palette for a subtree without touching this file or any component.
-// Default (:root) values are the LIVE navy/gold aviation palette; the
-// `.theme-preview` class (used only by the temporary /home1 preview route)
-// swaps them for an Opodo-style black + orange palette. Every component
-// still just uses bg-navy-900 / text-gold-400 / etc. as before.
+// Default (:root) values are the official TravelMark brand palette (gold +
+// charcoal, from the brand guidelines). `.theme-preview-v2` and
+// `.theme-islamic` are still-under-review alternates for the temporary
+// /home2 and /home2-umrah preview routes. Every component still just uses
+// bg-navy-900 / text-gold-400 / etc. as before.
 const config: Config = {
   darkMode: "class",
   content: [

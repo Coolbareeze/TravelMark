@@ -113,7 +113,7 @@ export default async function FlightsPage({
         </div>
       </section>
 
-      <AirlinesSection />
+      <AirlinesSection contrast />
 
       <CategoryFaq
         items={[

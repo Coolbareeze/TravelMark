@@ -47,7 +47,7 @@ export function travelAgencyJsonLd() {
     "@type": "TravelAgency",
     name: COMPANY.name,
     url: SITE_URL,
-    logo: `${SITE_URL}/images/logo.svg`,
+    logo: `${SITE_URL}/images/logo-icon-square.png`,
     image: "https://picsum.photos/seed/travelmark-og/1200/630",
     telephone: COMPANY.phone,
     priceRange: "££",

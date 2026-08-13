@@ -15,20 +15,17 @@ import { LoadingScreen } from "@/components/layout/LoadingScreen";
 export function SiteChrome({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const isAdmin = pathname?.startsWith("/admin");
-  // /home1, /home2 and /home2-umrah are temporary, unlinked routes used to
-  // preview alternate color schemes — see app/home1, app/home2,
-  // app/home2-umrah and the .theme-* tokens in globals.css. Wrapping the
-  // whole chrome (not just the page content) in the matching class means
-  // the header/footer/floating buttons preview consistently too, without
-  // affecting any other route. Order matters: /home2-umrah must be
-  // checked before /home2 since it also starts with "/home2".
-  const themeScopeClass = pathname?.startsWith("/home2-umrah")
-    ? "theme-islamic"
-    : pathname?.startsWith("/home2")
-      ? "theme-preview-v2"
-      : pathname?.startsWith("/home1")
-        ? "theme-preview"
-        : undefined;
+  // The Islamic (Deep Emerald / Islamic Gold / Warm Ivory) palette is now
+  // live on the real Hajj & Umrah section — /umrah-hajj gets the full
+  // header/footer/content treatment here. (Individual package detail
+  // pages under /holiday-packages/[slug] apply the same theme-islamic
+  // class themselves, content-only, when that package's category is
+  // "umrah-hajj" — see that page — since this pathname check can't see
+  // a dynamic route's data.) /home1 and /home2 were preview routes for
+  // the general site palette; /home1's brand colors were approved and
+  // promoted to the site-wide :root default, and /home2 (Navy/Teal/Gold)
+  // was not chosen, so both preview routes have been retired.
+  const themeScopeClass = pathname?.startsWith("/umrah-hajj") ? "theme-islamic" : undefined;
 
   if (isAdmin) {
     return <>{children}</>;

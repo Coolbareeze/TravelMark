@@ -6,92 +6,31 @@
    Theme tokens (RGB triplets, no commas — feeds Tailwind's
    rgb(var(--x) / <alpha-value>) pattern in tailwind.config.ts).
 
-   :root            = the LIVE navy/gold aviation palette (unchanged
-                       site-wide — every page not listed below).
-   .theme-preview   = Opodo-style black/orange palette, scoped only to
-                       the temporary /home1 preview route.
-   .theme-preview-v2 = Navy/Teal/Gold palette, scoped only to the
-                       temporary /home2 preview route (general pages).
-   .theme-islamic   = Deep Emerald/Islamic Gold/Ivory palette, scoped
-                       only to the temporary /home2-umrah preview route
-                       (Hajj/Umrah pages).
+   :root            = LIVE, site-wide. OFFICIAL brand colours, taken
+                       directly from the TravelMark Brand Guidelines (v1)
+                       and business card: Pantone 7752 C gold (#D4AF37) +
+                       Pantone 426 C charcoal (#2B2B2D), with the extended
+                       golden-gradient stops from the brand doc (#FFE383,
+                       #DEB95A, #D0A83E, #BD922A, #AA7A1A) for the
+                       lighter/darker steps of the gold scale. Approved
+                       from the /home1 preview.
+   .theme-islamic   = LIVE on the real Hajj & Umrah section. Deep
+                       Emerald/Islamic Gold/Warm Ivory palette, applied
+                       to /umrah-hajj (full page, via SiteChrome) and to
+                       individual Umrah/Hajj package detail pages
+                       (content only, via a per-page check on the
+                       package's category — see
+                       app/holiday-packages/[slug]/page.tsx).
+
+   (The Navy/Teal/Gold general-site alternative previewed at /home2 was
+   not chosen and its .theme-preview-v2 scope has been removed.)
 
    `accent` is a separate token from `gold`: it drives primary CTA
    buttons (Button's "gold" variant, the search-widget submit button,
    the newsletter submit button, the CtaBanner section) while `gold`
-   itself stays reserved for badges/stars/eyebrows/selected-states —
-   this split only matters once a scope repoints them to different
-   hues (home2's teal accent vs. literal gold badges); on the live
-   site both still resolve to the same colour as before, so nothing
-   changes there.
+   itself stays reserved for badges/stars/eyebrows/selected-states.
    -------------------------------------------------------------------- */
 :root {
-  --tm-navy-50: 234 240 247;
-  --tm-navy-100: 203 218 234;
-  --tm-navy-200: 157 185 214;
-  --tm-navy-300: 110 151 193;
-  --tm-navy-400: 63 118 172;
-  --tm-navy-500: 30 86 136;
-  --tm-navy-600: 18 62 104;
-  --tm-navy-700: 12 44 76;
-  --tm-navy-800: 8 31 56;
-  --tm-navy-900: 7 27 51;
-  --tm-navy-950: 4 15 29;
-
-  --tm-royal-50: 234 243 251;
-  --tm-royal-100: 203 225 244;
-  --tm-royal-200: 156 197 233;
-  --tm-royal-300: 109 169 221;
-  --tm-royal-400: 62 141 209;
-  --tm-royal-500: 29 113 184;
-  --tm-royal-600: 10 77 140;
-  --tm-royal-700: 8 61 112;
-  --tm-royal-800: 6 46 84;
-  --tm-royal-900: 4 30 56;
-
-  --tm-gold-50: 251 246 232;
-  --tm-gold-100: 244 231 192;
-  --tm-gold-200: 234 212 141;
-  --tm-gold-300: 223 193 90;
-  --tm-gold-400: 213 174 57;
-  --tm-gold-500: 200 154 43;
-  --tm-gold-600: 166 125 32;
-  --tm-gold-700: 125 95 24;
-  --tm-gold-800: 84 64 17;
-  --tm-gold-900: 43 33 9;
-
-  --tm-success-50: 229 249 241;
-  --tm-success-500: 0 168 107;
-  --tm-success-600: 0 135 90;
-
-  /* accent == gold on the live site today (Button's CTA variant already
-     used text-navy-900 on a gold-500 background) */
-  --tm-accent-50: 251 246 232;
-  --tm-accent-100: 244 231 192;
-  --tm-accent-200: 234 212 141;
-  --tm-accent-300: 223 193 90;
-  --tm-accent-400: 213 174 57;
-  --tm-accent-500: 200 154 43;
-  --tm-accent-600: 166 125 32;
-  --tm-accent-700: 125 95 24;
-  --tm-accent-800: 84 64 17;
-  --tm-accent-900: 43 33 9;
-  --tm-accent-fg: 7 27 51;
-
-  --tm-surface: 247 248 250;
-  --tm-ink: 27 31 35;
-}
-
-/* /home1 preview — OFFICIAL brand colours, taken directly from the
-   TravelMark Brand Guidelines (v1) and business card: Pantone 7752 C
-   gold (#D4AF37) + Pantone 426 C charcoal (#2B2B2D), with the extended
-   golden-gradient stops from the brand doc (#FFE383, #DEB95A, #D0A83E,
-   #BD922A, #AA7A1A) used for the lighter/darker steps of the gold scale.
-   The brand guide is explicit that the palette is strictly gold +
-   charcoal ("only use the colors shown below"), so no third hue is
-   introduced here — "royal" (secondary interactive) reuses the gold
-   family rather than inventing a new one. */
-.theme-preview {
   --tm-navy-50: 237 237 238;
   --tm-navy-100: 219 219 220;
   --tm-navy-200: 186 186 188;
@@ -105,10 +44,9 @@
   --tm-navy-950: 20 20 21;
 
   /* royal = a genuine navy blue (distinct from the charcoal "navy" token
-     above) — the client asked for gray + gold + navy blue, so this token
-     now carries the blue instead of reusing gold. Used for secondary
-     buttons, focus states, and one of the three section backgrounds
-     below, to keep it as a supporting accent rather than the star. */
+     above) — gray + gold + navy blue, per the approved direction. Used
+     for secondary buttons, focus states, and the testimonials section
+     background, to keep it as a supporting accent rather than the star. */
   --tm-royal-50: 230 235 243;
   --tm-royal-100: 199 211 230;
   --tm-royal-200: 148 168 199;
@@ -121,10 +59,9 @@
   --tm-royal-900: 11 22 42;
 
   /* gold — 400 softened/lightened toward the paler official gradient
-     stops (was the same as 400/D0A83E, which reads "orange" at large
-     text sizes); 500 stays the exact Pantone 7752C brand primary for
-     buttons, where higher saturation reads fine at small/high-contrast
-     sizes. */
+     stops (avoids reading "orange" at large text sizes); 500 stays the
+     exact Pantone 7752C brand primary for buttons, where higher
+     saturation reads fine at small/high-contrast sizes. */
   --tm-gold-50: 255 252 240;
   --tm-gold-100: 255 246 214;
   --tm-gold-200: 255 227 131;
@@ -156,67 +93,8 @@
   --tm-ink: 43 43 45;
 }
 
-/* /home2 preview — general TravelMark theme: Navy + Teal + Gold */
-.theme-preview-v2 {
-  --tm-navy-50: 232 238 246;
-  --tm-navy-100: 200 215 232;
-  --tm-navy-200: 150 180 210;
-  --tm-navy-300: 100 143 185;
-  --tm-navy-400: 60 108 156;
-  --tm-navy-500: 35 82 130;
-  --tm-navy-600: 27 66 108;
-  --tm-navy-700: 21 53 90;
-  --tm-navy-800: 16 42 74;
-  --tm-navy-900: 11 31 58;
-  --tm-navy-950: 6 16 30;
-
-  /* royal = secondary interactive (links/focus/outline) — same teal
-     family as accent so links and buttons read as one cohesive hue */
-  --tm-royal-50: 240 247 247;
-  --tm-royal-100: 214 235 236;
-  --tm-royal-200: 173 214 216;
-  --tm-royal-300: 122 189 192;
-  --tm-royal-400: 68 158 163;
-  --tm-royal-500: 8 126 139;
-  --tm-royal-600: 7 104 115;
-  --tm-royal-700: 6 82 91;
-  --tm-royal-800: 5 60 66;
-  --tm-royal-900: 3 38 42;
-
-  /* gold = literal Accent Gold — badges, stars, eyebrows, selected states */
-  --tm-gold-50: 253 247 232;
-  --tm-gold-100: 249 234 195;
-  --tm-gold-200: 240 213 141;
-  --tm-gold-300: 231 192 87;
-  --tm-gold-400: 223 175 62;
-  --tm-gold-500: 212 167 44;
-  --tm-gold-600: 176 139 36;
-  --tm-gold-700: 133 105 27;
-  --tm-gold-800: 88 70 18;
-  --tm-gold-900: 44 35 9;
-
-  --tm-success-50: 229 249 241;
-  --tm-success-500: 0 168 107;
-  --tm-success-600: 0 135 90;
-
-  /* accent = Teal — primary CTA buttons, search/newsletter submit, links */
-  --tm-accent-50: 240 247 247;
-  --tm-accent-100: 214 235 236;
-  --tm-accent-200: 173 214 216;
-  --tm-accent-300: 122 189 192;
-  --tm-accent-400: 68 158 163;
-  --tm-accent-500: 8 126 139;
-  --tm-accent-600: 7 104 115;
-  --tm-accent-700: 6 82 91;
-  --tm-accent-800: 5 60 66;
-  --tm-accent-900: 3 38 42;
-  --tm-accent-fg: 255 255 255;
-
-  --tm-surface: 244 247 248;
-  --tm-ink: 30 41 51;
-}
-
-/* /home2-umrah preview — Islamic theme for Hajj/Umrah pages */
+/* LIVE — Islamic theme for the Hajj & Umrah section (see SiteChrome and
+   app/holiday-packages/[slug]/page.tsx for where this class is applied) */
 .theme-islamic {
   /* navy role -> Deep Emerald: header/hero/footer/major headings */
   --tm-navy-50: 235 247 240;
@@ -361,7 +239,7 @@
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(7, 27, 51, 0.25);
+  background-color: rgba(43, 43, 45, 0.25);
   border-radius: 9999px;
   border: 2px solid transparent;
   background-clip: content-box;

@@ -25,11 +25,11 @@ export default function HomePage() {
       <Hero />
       <DestinationsSection />
       <PackagesSection />
-      <AirlinesSection />
-      <ServicesSection />
+      <AirlinesSection contrast />
+      <ServicesSection contrast />
       <WhyChooseUsSection />
       <CtaBanner />
-      <TestimonialsSection />
+      <TestimonialsSection contrast />
       <BlogTeaserSection />
       <FaqSection />
       <NewsletterSection />

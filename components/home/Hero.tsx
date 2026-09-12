@@ -20,7 +20,7 @@ export function Hero() {
         muted
         loop
         playsInline
-        poster="https://picsum.photos/seed/travelmark-hero/1920/1080"
+        poster="/images/hero/homepage.jpg"
         className="absolute inset-0 h-full w-full object-cover grayscale contrast-105"
       >
         <source src="/videos/hero.mp4" type="video/mp4" />

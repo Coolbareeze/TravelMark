@@ -25,7 +25,7 @@ export default async function UmrahHajjPage() {
         eyebrow="Umrah & Hajj"
         title="A Sacred Journey, Thoughtfully Arranged"
         description="From visa processing to Haram-facing hotels and experienced group leaders, we handle every detail of your Umrah or Hajj journey."
-        image="https://picsum.photos/seed/travelmark-umrah-hero/1920/1080"
+        image="/images/hero/umrah-hero.jpg"
         breadcrumbLabel="Umrah & Hajj"
         ctaLabel="Speak to a Consultant"
       />
@@ -41,8 +41,8 @@ export default async function UmrahHajjPage() {
         <div className="container grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <div className="relative order-2 h-80 overflow-hidden rounded-xl3 shadow-elevated md:h-96 lg:order-1">
             <Image
-              src="https://picsum.photos/seed/travelmark-umrah-side/900/1100"
-              alt="Pilgrims travelling for Umrah"
+              src="/images/hero/umrah-side.jpg"
+              alt="The Green Dome of Masjid an-Nabawi, Madinah"
               fill
               sizes="(max-width: 1024px) 90vw, 45vw"
               className="object-cover"

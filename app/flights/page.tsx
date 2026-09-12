@@ -32,7 +32,7 @@ export default async function FlightsPage({
     <>
       <section className="relative overflow-hidden bg-navy-950 pb-16 pt-32">
         <Image
-          src="https://picsum.photos/seed/travelmark-flights-hero/1920/1080"
+          src="/images/hero/flights-hero.jpg"
           alt=""
           fill
           className="object-cover opacity-40"

@@ -26,7 +26,7 @@ export function LoadingScreen() {
       {loading && (
         <motion.div
           exit={{ opacity: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } }}
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-navy-950"
+          className="pointer-events-none fixed inset-0 z-[100] flex items-center justify-center bg-navy-950"
           aria-hidden
         >
           <motion.div
